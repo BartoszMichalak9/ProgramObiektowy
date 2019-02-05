@@ -9,8 +9,7 @@ class poly //klasa poly
 {
 private:
 	vector <double> tabpoly; //kontener stl - wektor (tablica dynamiczna double o nazwie tabwie)
-	//tutaj beda wprowadzane zmiany 
-	//zmiany w galezi testing tu
+	//tutaj beda wprowadzane zmiany testing
 public:
 
 	poly(double w=0) //wpisanie do tablicy
