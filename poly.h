@@ -14,10 +14,18 @@ private:
 	
 public:
 	poly(double w=0) 
-	{		
-	tabpoly = new double[0];
-	tabpoly[0]=w;	
-	}
+		{		
+			tabpoly = new double[0];
+			tabpoly[0]=w;	
+		}
+	
+	
+	~poly()
+		{
+			delete [] tabpoly;
+		}
+
+
 
 	double & operator[] (unsigned int nr) //przypisanie [] dostêpu do ka¿dego elementu w tablicy
 	{
