@@ -9,14 +9,30 @@ class poly //klasa poly
 {
 private:
 	double* tabpoly;
-	//testing
+	double* newtabpoly;
+	unsigned int size;
+	
 public:
+	poly(double w=0) 
+		{		
+			tabpoly = new double[0];
+			tabpoly[0]=w;	
+		}
+	
+	
+	~poly()
+		{
+			delete [] tabpoly;
+		}
 
-	poly(double w=0) //wpisanie do tablicy
-	{
-		this->tabpoly.push_back(w);
-	}
-
+	poly(const poly &p)
+		{
+			tabpoly = new double [p.size];
+			size=p.size;
+		
+			for (int i=0;i<p.size;i++)
+				tabpoly[i]=p.tabpoly[i];
+		}
 
 	double & operator[] (unsigned int nr) //przypisanie [] dostêpu do ka¿dego elementu w tablicy
 	{
@@ -61,6 +77,7 @@ public:
 	
 				else // wyswietlanie stopnia > 1
 				{
+					
 					s << " + "<< wie.tabpoly[i]<<"x^"<< i;				
 				}
 		   	}
