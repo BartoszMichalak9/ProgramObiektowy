@@ -9,6 +9,7 @@ class poly //klasa poly
 {
 private:
 	double* tabpoly;
+	//testing
 public:
 
 	poly(double w=0) //wpisanie do tablicy
