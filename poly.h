@@ -25,7 +25,14 @@ public:
 			delete [] tabpoly;
 		}
 
-
+	poly(const poly &p)
+		{
+			tabpoly = new double [p.size];
+			size=p.size;
+		
+			for (int i=0;i<p.size;i++)
+				tabpoly[i]=p.tabpoly[i];
+		}
 
 	double & operator[] (unsigned int nr) //przypisanie [] dostêpu do ka¿dego elementu w tablicy
 	{
